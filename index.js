@@ -21,5 +21,10 @@ app.get('/users/:id', (req, res) => {
     const name = users[id];
     res.send({ id, name });
 })
+const user = ['Moin', 'Sohan', 'Anam', 'Shakil']
+app.get('/user/:id', (req, res) => {
+    const id = req.params.id;
+    console.log(req.query);
+})
 
 app.listen(8080, console.log("Listening port 8080"));
